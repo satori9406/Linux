@@ -17,7 +17,7 @@ echo "🚀 備份開始..."
 > "$BACKUP_FILE"
 
 for p in "${PATHS[@]}"; do
-    dconf dump "$p" >> "$BACKUP_FILE"
-done
+    dconf dump "$p"
+    done > "$BACKUP_FILE"
 
 echo "✨ 備份成功！你的設定已安全存放在：$BACKUP_FILE"
